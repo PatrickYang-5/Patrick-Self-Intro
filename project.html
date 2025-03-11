@@ -1,0 +1,267 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peiyu Yang - Personal Website</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px; 
+            line-height: 1.6; 
+            background: white; 
+            color: black; 
+            transition: 0.3s; 
+            font-size: 16px; 
+        }
+        .container { max-width: 1000px; margin: auto; }
+
+        .dark-mode .navbar a { color: white; }
+
+        /* 姓名居中 */
+        .name-container {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background: white; color: black; transition: 0.3s; }
+        .container { max-width: 1000px; margin: auto; }
+        .navbar { display: flex; justify-content: flex-end; gap: 20px; padding: 10px; }
+        .navbar a { text-decoration: none; color: black; font-weight: bold; }
+        .dark-mode .navbar a { color: white; }
+        .profile { display: flex; align-items: center; gap: 20px; }
+        .profile img { width: 300px; border-radius: 10px; }
+        .social-icons a { margin-right: 10px; text-decoration: none; font-size: 20px; }
+        .section { margin-top: 30px; }
+        .publication { display: flex; align-items: center; gap: 20px; margin-bottom: 15px; }
+        .publication img { width: 150px; height: auto; border-radius: 5px; }
+        .toggle-btn { cursor: pointer; font-size: 20px; }
+        .dark-mode { background: #121212; color: white; }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<div class="navbar">
+    <a href="index.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="cv.html">CV</a>
+    <a href="unforgettable.html">Unforgettable-Moments</a>
+    <span class="toggle-btn" onclick="toggleDarkMode()">🌙</span>
+</div>
+
+<!-- 姓名部分 -->
+<div class="name-container">
+    Peiyu Yang (杨沛禹)
+</div>
+
+<!-- 内容部分 -->
+<div class="container">
+    <div id="about" class="profile">
+        <div>
+            <h2>Welcome to projects!</h2>
+            <p>
+                The links to each project are still under construction, so feel free to contact me for a verbal presentation!
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="about" class="profile">
+        <div>
+        <h2>Research</h2>
+        <div style="margin-bottom: 15px;">
+            <a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="Figs/safe.jpg" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">Safe Locomotion for Quadrupedal robots</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">We propose a coupled terrain, state, and contact estimation system using proprioceptive sensing.</li>
+                            <li style="color: gray;">Provide a CBF-based safe motion guarantee relying only on proprioception.</li>
+                            <li style="color: gray;">I'm currently exploring reinforcement learning and model-based approaches to safety assurance.</li>
+                            <li style="color: gray;"><b>Thesis</b> project at TU Delft.</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="./Figs/XingT.gif" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">Design of XingT: A Human-sized Heavy-duty Bipedal Robot</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">Designed a loadable and multi-mode bipedal robot with a height of range 0.9-1.2m.</li>
+                            <li style="color: gray;">We built the robot hardware and performed extensive simulations and hardware experiments on the subsystems and the whole.</li>
+                            <li style="color: gray;">The remarkable performance of the robot is demonstrated by the strong load capacity and the active and passive flexibility of the structure.</li>
+                            <li style="color: gray;"><b>Interest research</b>(on design) and <b>thesis</b>(on EKF) project at BIT.</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center;">
+                <img src="Figs/mitacs.gif" alt="Project 1" style="width: 130px; margin-right: 50px; margin-left: 20px;">
+                <div>
+                    <h3 style="margin: 5px 0;">Design and Fabrication of a Legged Robot Prototype: Phase II</h3>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color: gray;">Designed a self-adaptive robotic leg based on Hoecken’s linkage and pantograph.</li>
+                        <li style="color: gray;">Proposed a damping compliant method for adaptive structure of the pantograph, which can significantly improve the flexibility of the adaptive structure.</li>
+                        <li style="color: gray;"><b>Internship</b> project at École Polytechnique de Montréal</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <a href="./PDFs/Mitacs.pptx" 
+            style="display: inline-block; padding: 5px 12px; font-size: 14px; font-weight: bold; text-decoration: none; color: black; border: 1px solid black; border-radius: 5px; background: white; margin-bottom: 15px;">
+            Introduction Slides
+        </a>
+        </div>
+
+        <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center;">
+                <img src="Figs/NC_3d.png" alt="Project 1" style="width: 180px; margin-right: 25px;">
+                <div>
+                    <h3 style="margin: 5px 0;">Target Detection and Kinematic Reconstruction Based on Computer Vision</h3>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color: gray;">Designed a feature recognition and motion reconstruction system based on orthogonal vision.</li>
+                        <li style="color: gray;">Education project at <b>North Carolina State University</b></li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        </div>
+
+        <div>
+            <h2>CourseWork</h2>
+            <div style="margin-bottom: 15px;"><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="Figs/MPCsystem.PNG" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">Two-stage Multi-UAVs Planning and Control</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">Presented a two-stage multi-UAV path planning solution with modified A* as global planner, and MPC combining with APF as local planner.</li>
+                            <li style="color: gray;">Simulated formations of a cluster comprising 27 UAVs in an obstacle environment.</li>
+                            <li style="color: gray;">Course project at <b>PDM</b> and <b>MPC</b> at TU Delft</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://youtu.be/RkOqEFh1KFM" 
+                style="display: inline-block; padding: 5px 12px; font-size: 14px; font-weight: bold; text-decoration: none; color: black; border: 1px solid black; border-radius: 5px; background: white;">
+                Video
+            </a>
+    
+            <a href="https://github.com/PatrickYang-5/MPC_drones" 
+                style="display: inline-block; padding: 5px 12px; font-size: 14px; font-weight: bold; text-decoration: none; color: black; border: 1px solid black; border-radius: 5px; background: white;">
+                Code
+            </a>
+    
+            <a href="./PDFs/planning.pdf" 
+                style="display: inline-block; padding: 5px 12px; font-size: 14px; font-weight: bold; text-decoration: none; color: black; border: 1px solid black; border-radius: 5px; background: white;">
+                Planner PDF
+            </a>
+    
+            <a href="./PDFs/MPC.pdf" 
+                style="display: inline-block; padding: 5px 12px; font-size: 14px; font-weight: bold; text-decoration: none; color: black; border: 1px solid black; border-radius: 5px; background: white;">
+                MPC PDF
+            </a>
+        </div>
+
+        <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center;">
+                <img src="Figs/LNN.gif" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                <div>
+                    <h3 style="margin: 5px 0;">Intelligent control methods for robotic arms</h3>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color: gray;">Train LNNs (Lagrangian Neural Networks) for obtaining the dynamic model of a 2-DoF robotic arm.</li>
+                        <li style="color: gray;">Apply PD and PD+ methods to the learned model.</li>
+                        <li style="color: gray;">Course project at <b>ICS</b> at TU Delft.</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        </div>
+
+        <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center;">
+                <img src="Figs/nn_car.gif" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                <div>
+                    <h3 style="margin: 5px 0;">Intelligent Vehicle Navigation Method Based on Evolutionary Neural Network</h3>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color: gray;">Proposed an evolutionary neural networks (E-NN) for vehicle navigation system based on LIDAR.</li>
+                        <li style="color: gray;">Carried out the simulations, and results showed that the vehicle model can achieve full path tracking operation in about 10 generations in the regular track, and can achieve full path tracking in about 50 generations in the sinusoidal track.</li>
+                        <li style="color: gray;">Course project at <b>IIC</b> at BIT.</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        </div>
+
+        <div>
+            <h2>OtherWork</h2>
+            <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="Figs/RSS.png" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">Robot Summer School at ETHz</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">Learn and try robot control, navigation, and visual detection frameworks to enable robots exploring a unknown maze without remote control and detecting target objects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="Figs/eye.jpg" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">An auxiliary device for the measurement of pupillary parameters</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">Cooperation Program with Beijing Tongren Hospital.</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="Figs/tact.jpg" alt="Project 1" style="width: 180px; margin-right: 20px;">
+                    <div>
+                        <h3 style="margin: 5px 0;">A multi-channel high-precision pressure sensing system.</h3>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="color: gray;">Cooperation Program with Beijing Union University.</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let toggleBtn = document.querySelector(".toggle-btn");
+        if (document.body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "☀️";
+        } else {
+            toggleBtn.textContent = "🌙";
+        }
+    }
+</script>
+
+</body>
+</html>
