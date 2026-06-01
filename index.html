@@ -5,19 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peiyu Yang - Personal Website</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background: white; color: black; transition: 0.3s; }
-        .container { max-width: 1000px; margin: auto; }
-        .navbar { display: flex; justify-content: flex-end; gap: 20px; padding: 10px; }
+        * { box-sizing: border-box; }
+        html { overflow-x: hidden; }
+        body { font-family: Arial, sans-serif; margin: clamp(16px, 4vw, 40px); line-height: 1.6; background: white; color: black; transition: 0.3s; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1000px; width: 100%; margin: auto; }
+        .navbar { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 12px 20px; padding: 10px; }
         .navbar a { text-decoration: none; color: black; font-weight: bold; }
         .dark-mode .navbar a { color: white; }
         .profile { display: flex; align-items: center; gap: 20px; }
         .profile img { width: 300px; border-radius: 10px; }
+        .profile > div { min-width: 0; }
         .social-icons a { margin-right: 10px; text-decoration: none; font-size: 20px; }
         .section { margin-top: 30px; }
         .publication { display: flex; align-items: center; gap: 20px; margin-bottom: 15px; }
         .publication img { width: 150px; height: auto; border-radius: 5px; }
+        .publication > div { min-width: 0; }
+        .project-card, .project-body { min-width: 0; }
         .toggle-btn { cursor: pointer; font-size: 20px; }
         .dark-mode { background: #121212; color: white; }
+
+        @media (max-width: 700px) {
+            body { margin: 14px; font-size: 15px; line-height: 1.55; }
+            .navbar { justify-content: flex-start; gap: 8px 14px; padding: 6px 0 14px; }
+            .navbar a { font-size: 14px; }
+            .profile { flex-direction: column; align-items: flex-start; }
+            .profile img { width: min(72vw, 260px); align-self: center; }
+            .profile h1 { font-size: 26px; line-height: 1.2; margin-bottom: 4px !important; }
+            .social-icons { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+            .social-icons a { margin-right: 0; font-size: 17px; }
+            .section { margin-top: 24px; }
+            h2 { font-size: 24px; }
+            h3 { line-height: 1.25; }
+            .publication,
+            .publication[style] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                gap: 12px !important;
+            }
+            .publication > div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+            }
+            .publication img,
+            .publication img[style] {
+                width: min(100%, 220px) !important;
+                margin: 0 !important;
+            }
+            .project-card,
+            .project-card[style],
+            .project-body,
+            .project-body[style] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            .project-card img,
+            .project-card img[style] {
+                width: min(100%, 240px) !important;
+                margin: 0 0 12px 0 !important;
+            }
+            .selected-projects ul { padding-left: 18px !important; }
+            #Experience > div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            #Experience > div > div[style*="flex-direction: column"] {
+                flex-direction: row !important;
+                flex-wrap: wrap;
+                align-items: flex-start !important;
+                min-width: 0 !important;
+                margin-right: 0 !important;
+            }
+            #Experience img,
+            #Experience img[style] {
+                width: min(45vw, 150px) !important;
+                margin: 0 0 12px 0 !important;
+            }
+            #Experience span {
+                width: 100%;
+                min-width: 0 !important;
+                text-align: left !important;
+                margin-top: 4px;
+            }
+            table, tbody, tr, td { display: block; width: 100%; }
+            td[align="right"] { text-align: left !important; color: gray; margin-top: 4px; }
+        }
     </style>
 </head>
 <body>
@@ -146,10 +220,10 @@
 
     <hr style="border: 1px solid lightgray;">
 
-    <div id="key Projects" class="section">
+    <div id="key Projects" class="section selected-projects">
         <h2>Selected Projects</h2>
-        <div style="margin-bottom: 15px;"><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
-            <div style="display: flex; align-items: center;">
+        <div style="margin-bottom: 15px;"><a class="project-card" style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div class="project-body" style="display: flex; align-items: center;">
                 <img src="Figs/MPCsystem.PNG" alt="Project 1" style="width: 180px; margin-right: 20px;">
                 <div>
                     <h3 style="margin: 5px 0;">Two-stage Multi-UAVs Planning and Control</h3>
@@ -182,8 +256,8 @@
         </a>
         </div>
 
-        <div><a style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
-            <div style="display: flex; align-items: center;">
+        <div><a class="project-card" style="display: flex; align-items: center; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; margin-bottom: 15px;">
+            <div class="project-body" style="display: flex; align-items: center;">
                 <img src="Figs/mitacs.gif" alt="Project 1" style="width: 130px; margin-right: 50px; margin-left: 20px;">
                 <div>
                     <h3 style="margin: 5px 0;">Design and Fabrication of a Legged Robot Prototype: Phase II</h3>
